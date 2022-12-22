@@ -71,9 +71,9 @@ class CustomDropdownButton2 extends StatelessWidget {
             hint,
             overflow: TextOverflow.ellipsis,
             maxLines: 1,
-            style: TextStyle(
-              fontSize: 14,
-              color: Theme.of(context).hintColor,
+            style: TextStyle(fontFamily:'apm',
+              fontSize: 16,
+              color: Colors.white,
             ),
           ),
         ),
@@ -87,8 +87,9 @@ class CustomDropdownButton2 extends StatelessWidget {
                       item,
                       overflow: TextOverflow.ellipsis,
                       maxLines: 1,
-                      style: const TextStyle(
-                        fontSize: 14,
+                      style: const TextStyle(fontFamily:'apb',
+                        color: Colors.white,
+                        fontSize: 16,
                       ),
                     ),
                   ),
@@ -106,7 +107,7 @@ class CustomDropdownButton2 extends StatelessWidget {
             buttonPadding ?? const EdgeInsets.only(left: 14, right: 14),
         buttonDecoration: buttonDecoration ??
             BoxDecoration(
-              borderRadius: BorderRadius.circular(14),
+              borderRadius: BorderRadius.circular(4),
               border: Border.all(
                 color: Colors.black45,
               ),
@@ -116,11 +117,11 @@ class CustomDropdownButton2 extends StatelessWidget {
         itemPadding: itemPadding ?? const EdgeInsets.only(left: 14, right: 14),
         //Max height for the dropdown menu & becoming scrollable if there are more items. If you pass Null it will take max height possible for the items.
         dropdownMaxHeight: dropdownHeight ?? 200,
-        dropdownWidth: dropdownWidth ?? 140,
+        dropdownWidth: buttonWidth,
         dropdownPadding: dropdownPadding,
         dropdownDecoration: dropdownDecoration ??
             BoxDecoration(
-              borderRadius: BorderRadius.circular(14),
+              borderRadius: BorderRadius.circular(4),
             ),
         dropdownElevation: dropdownElevation ?? 8,
         scrollbarRadius: scrollbarRadius ?? const Radius.circular(40),
