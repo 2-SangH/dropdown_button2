@@ -27,6 +27,8 @@ class CustomDropdownButton2 extends StatelessWidget {
   final double? scrollbarThickness;
   final bool? scrollbarAlwaysShow;
   final Offset? offset;
+  final TextStyle? buttonTextStyle;
+  final TextStyle? itemTextStyle;
 
   const CustomDropdownButton2({
     required this.hint,
@@ -57,6 +59,8 @@ class CustomDropdownButton2 extends StatelessWidget {
     this.scrollbarAlwaysShow,
     this.offset,
     Key? key,
+    this.buttonTextStyle,
+    this.itemTextStyle,
   }) : super(key: key);
 
   @override
@@ -71,10 +75,12 @@ class CustomDropdownButton2 extends StatelessWidget {
             hint,
             overflow: TextOverflow.ellipsis,
             maxLines: 1,
-            style: TextStyle(fontFamily:'apm',
-              fontSize: 16,
-              color: Colors.black,
-            ),
+            style: buttonTextStyle ??
+                const TextStyle(
+                  fontFamily: 'apm',
+                  fontSize: 16,
+                  color: Colors.black,
+                ),
           ),
         ),
         value: value,
@@ -87,10 +93,12 @@ class CustomDropdownButton2 extends StatelessWidget {
                       item,
                       overflow: TextOverflow.ellipsis,
                       maxLines: 1,
-                      style: const TextStyle(fontFamily:'apb',
-                        color: Colors.black,
-                        fontSize: 16,
-                      ),
+                      style: itemTextStyle ??
+                          const TextStyle(
+                            fontFamily: 'apb',
+                            color: Colors.black,
+                            fontSize: 16,
+                          ),
                     ),
                   ),
                 ))
